@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: flask-application
+  namespace: monitoring
+  labels:
+    type: myservice
+spec:
+  selector:
+    app: flask-application
+  ports:
+    - name: web
+      port: 80
+      targetPort: 8080
+
